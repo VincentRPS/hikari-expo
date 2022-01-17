@@ -1,5 +1,10 @@
 # hikari-expo
 expo is a extension for hikari providing a meriad of useful features.
+
+# Warning
+expo is still under heavy development and is not meant for public use,
+however if you do use it expect frequent breaking changes.
+
 # Installing
 If you want to install the stable version just do the following command:
 ```sh
