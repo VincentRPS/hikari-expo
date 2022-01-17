@@ -19,5 +19,7 @@ cd hikari-expo
 
 # Useful links
 the [hikari discord](https://discord.gg/3kDAzaM36b)
+
 the [hikari docs](https://www.hikari-py.dev/hikari/index.html)
+
 the [discord developers](https://discord.gg/discord-developers) server.
