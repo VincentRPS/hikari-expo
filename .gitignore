@@ -1,2 +1,4 @@
 .nox/
 __pycache__/
+hikari_expo.egg-info/
+dist/

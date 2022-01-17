@@ -39,7 +39,8 @@ setup(
     classifiers=[
         "Typing :: Typed",
         "Framework :: aiohttp",
-        "Framework :: AsyncIO" "Development Status :: 2 - Pre-Alpha",
+        "Framework :: AsyncIO", 
+        "Development Status :: 2 - Pre-Alpha",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "License :: OSI Approved :: Apache Software License",
