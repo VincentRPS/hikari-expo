@@ -8,3 +8,6 @@ hikari-expo is an extension module for hikari.
 """
 
 __version__ = "1.0.0"
+
+from .api import *
+from .internal import *
