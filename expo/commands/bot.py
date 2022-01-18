@@ -14,53 +14,56 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 # An instance of hikari.GatewayBot with a built in command handler.
-import concurrent
-import typing
+import typing as t
 
 import hikari
-from hikari import Intents, config
 
 from .core import Command
+
+
+def on_mention(bot: "Bot", spaced: bool = False):
+    me = bot.get_me()
+    if spaced:
+        mentions = [f"<@{me.id}> ", f"<@!{me.id}> "]
+    else:
+        mentions = [f"<@{me.id}>", f"<@!{me.id}>"]
 
 
 # for anyone running mypy, there is a lot of errors here...
 # i am too lazy to fix them so i will just ignore it,
 # if you find whats wrong you can just make a PR!
 class Bot(hikari.GatewayBot):
+    """A subclass of :class:`hikari.GatewayBot` adding functionality like
+    command handling and voice while keeping the features of GatewayBot.
+
+    Parameters
+    ----------
+    command_prefix
+        The bots command prefix
+    """
+
     def __init__(
-        self,
-        token: str,
-        *,
-        command_prefix: str = ...,
-        allow_color: bool = True,
-        banner: typing.Optional[str] = "hikari",
-        executor: typing.Optional[concurrent.futures.Executor] = None,
-        force_color: bool = False,
-        cache_settings: typing.Optional[config.CacheSettings] = None,
-        http_settings: typing.Optional[config.HTTPSettings] = None,
-        intents: Intents = ...,
-        logs: typing.Union[None, int, str, typing.Dict[str, typing.Any]] = "INFO",
-        max_rate_limit: float = 300,
-        max_retries: int = 3,
-        proxy_settings: typing.Optional[config.ProxySettings] = None,
-        rest_url: typing.Optional[str] = None
+        self, token: str, command_prefix: str = on_mention, **kwargs: t.Any
     ) -> None:
         self.command_prefix = command_prefix
-        super().__init__(
-            token,
-            banner,
-            executor,
-            force_color,
-            cache_settings,
-            http_settings,
-            intents,
-            logs,
-            max_rate_limit,
-            max_retries,
-            proxy_settings,
-            rest_url,
-            allow_color=allow_color,
-        )
+        if "banner" not in kwargs:
+            kwargs["banner"] = "expo" # We do a little cool
+        super().__init__(token, **kwargs)
 
     def command(self) -> Command:
+        """The command creator.
+
+        returns
+        -------
+        :class:`Command`
+        """
         return Command
+
+    def get_prefix(self):
+        """returns the bots command prefix
+
+        returns
+        -------
+        :class:`commands.Bot.command_prefix`
+        """
+        return self.command_prefix

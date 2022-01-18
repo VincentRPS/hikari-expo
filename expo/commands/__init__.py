@@ -7,7 +7,6 @@ hikari command handler
 :license: Apache-2.0
 """
 from ._types import *
-from .app import *
 from .bot import *
 from .context import *
 from .core import *

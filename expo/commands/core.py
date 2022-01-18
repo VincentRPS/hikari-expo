@@ -26,9 +26,7 @@ T = t.TypeVar("T")
 CogT = t.TypeVar("CogT", bound="Cog")
 CommandT = t.TypeVar("CommandT", bound="Command")
 ContextT = t.TypeVar("ContextT", bound="Context")
-
-if t.TYPE_CHECKING:
-    P = t.ParamSpec("P")
+P = t.ParamSpec("P")
 
 # GroupT = t.TypeVar("GroupT", bound="Group")  # command groups.
 # ErrorT = t.TypeVar("ErrorT", bound="Error")  # error event

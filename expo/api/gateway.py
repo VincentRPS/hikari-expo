@@ -30,6 +30,11 @@ GATEWAY: str = "wss://gateway.discord.gg/?v=4"
 class VoiceGateway:
     # This is the reason every hikari lavalink extension is
     # in rust btw, the gateway is hard to make with python.
+    """Represents the Gateway between discord and your bot
+    within voice standards,
+    It also interacts with your :class:`api.VoiceClient`
+    """
+
     def __init__(self, loop):
         self.__session = aiohttp.ClientSession()
         self.loop: AbstractEventLoop = loop

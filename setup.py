@@ -24,9 +24,11 @@ packages = [
     "expo",
     "expo.ui",
     "expo.api",
+    "expo.ipc",
     "expo.commands",
     "expo.internal",
     "expo.lavalink",
+    "expo.commands.app",
 ]
 
 setup(
@@ -36,6 +38,16 @@ setup(
     long_description=README,
     author="VincentRPS",
     packages=packages,
+    package_data={
+        "expo": ["banner.txt"]
+    },
+    requires=["hikari"],
+    extras_require={
+        "docs": [
+            "sphinx",
+            "furo",
+        ]
+    },
     classifiers=[
         "Typing :: Typed",
         "Framework :: aiohttp",

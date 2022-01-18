@@ -19,5 +19,7 @@ limitations under the License.
 
 
 class Server:
+    """The server requesting to the :class:`ipc.Client`"""
+
     def __init__(self, host, port, secret_key):
         ...

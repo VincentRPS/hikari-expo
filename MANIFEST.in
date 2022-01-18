@@ -1,3 +1,4 @@
 include expo
+include expo/banner.txt
 include expo/py.typed
 include README.md

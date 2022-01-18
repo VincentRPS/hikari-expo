@@ -17,5 +17,7 @@ limitations under the License.
 
 
 class Client:
+    """The IPC Client Responding to the server."""
+
     def __init__(self, host, port, secret_key):
         ...

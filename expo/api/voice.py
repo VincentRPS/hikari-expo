@@ -16,4 +16,9 @@ limitations under the License.
 
 
 class VoiceClient:
+    """The client giving you easier control of :class:`api.VoiceGateway`
+    within a easier client-like connection. while this class isn't needed,
+    who wants to interact with raw json/opus audio?
+    """
+
     ...
