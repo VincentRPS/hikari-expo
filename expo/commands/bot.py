@@ -13,16 +13,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+# An instance of hikari.GatewayBot with a built in command handler.
 import concurrent
 import typing
 
-# An instance of hikari.GatewayBot with a built in command handler.
 import hikari
 from hikari import Intents, config
 
 from .core import Command
 
 
+# for anyone running mypy, there is a lot of errors here...
+# i am too lazy to fix them so i will just ignore it,
+# if you find whats wrong you can just make a PR!
 class Bot(hikari.GatewayBot):
     def __init__(
         self,

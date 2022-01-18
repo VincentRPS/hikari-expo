@@ -13,9 +13,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-import os
+# The server, webserver.
+# Any WebSocket thing should work with this,
+# e.g. flask, sanic, and aiohttp.
 
-os.system(
-    "stubgen expo/__init__.py expo/api/__init__.py expo/ui/__init__.py expo/commands/__init__.py ",
-    "expo/commands/app/__init__.py expo/ipc/__init__.py  -o ."
-)
+
+class Server:
+    def __init__(self, host, port, secret_key):
+        ...

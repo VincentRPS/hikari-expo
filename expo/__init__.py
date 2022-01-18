@@ -7,7 +7,22 @@ hikari-expo is an extension module for hikari.
 :license: Apache-2.0
 """
 
-__version__ = "1.0.0"
+__version__: str = "1.0.0"
+
+import typing as t
 
 from .api import *
 from .internal import *
+
+
+class VersionInfo(t.NamedTuple):
+    major: int
+    minor: int
+    micro: int
+    releaselevel: t.Literal["alpha", "beta", "candidate", "final"]
+    serial: int
+
+
+version_info: VersionInfo = VersionInfo(
+    major=2, minor=0, micro=0, releaselevel="alpha", serial=0
+)

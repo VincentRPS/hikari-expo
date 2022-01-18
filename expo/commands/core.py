@@ -29,8 +29,6 @@ ContextT = t.TypeVar("ContextT", bound="Context")
 
 if t.TYPE_CHECKING:
     P = t.ParamSpec("P")
-else:
-    P = t.TypeVar("P")
 
 # GroupT = t.TypeVar("GroupT", bound="Group")  # command groups.
 # ErrorT = t.TypeVar("ErrorT", bound="Error")  # error event
@@ -99,6 +97,8 @@ class Command(_BaseCommand, t.Generic[CogT, P, T]):
         self.module = unwrap.__module__
 
         try:
-            globalns = unwrap.__globals__
+            ...
+            # globalns = unwrap.__globals__
         except AttributeError:
-            globalns = {}
+            ...
+            # globalns = {}

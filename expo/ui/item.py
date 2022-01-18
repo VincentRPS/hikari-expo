@@ -13,9 +13,20 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-import os
+# This file is mostly based off the discord.py impl.
+from __future__ import annotations
 
-os.system(
-    "stubgen expo/__init__.py expo/api/__init__.py expo/ui/__init__.py expo/commands/__init__.py ",
-    "expo/commands/app/__init__.py expo/ipc/__init__.py  -o ."
-)
+import typing as t
+
+# from .interaction import Interaction
+
+if t.TYPE_CHECKING:
+    from .view import View
+
+V = t.TypeVar("V", bound="View", covariant=True)
+
+
+class Item(t.Generic[V]):
+    """The base class for any component."""
+
+    ...

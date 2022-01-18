@@ -13,10 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-import nox
+# The client (your bot)
 
 
-@nox.session
-def mypy(session: nox.Session):
-    session.install("mypy")
-    session.run("mypy", "expo")
+class Client:
+    def __init__(self, host, port, secret_key):
+        ...

@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 # because the voice gateway is on a different version, it needs to be rebuilt for expo.
+# this is in no way finished.
 import json
 import struct
 from asyncio import AbstractEventLoop
@@ -27,8 +28,7 @@ GATEWAY: str = "wss://gateway.discord.gg/?v=4"
 
 
 class VoiceGateway:
-    # This is the reason every
-    # hikari lavalink extension is
+    # This is the reason every hikari lavalink extension is
     # in rust btw, the gateway is hard to make with python.
     def __init__(self, loop):
         self.__session = aiohttp.ClientSession()

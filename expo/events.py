@@ -13,9 +13,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-import os
+import abc
 
-os.system(
-    "stubgen expo/__init__.py expo/api/__init__.py expo/ui/__init__.py expo/commands/__init__.py ",
-    "expo/commands/app/__init__.py expo/ipc/__init__.py  -o ."
-)
+from hikari import Event
+
+
+class ExpoEvent(Event, abc.ABC):
+    """The base event for all expo events."""
