@@ -23,10 +23,8 @@ from .core import Command
 
 def on_mention(bot: "Bot", spaced: bool = False):
     me = bot.get_me()
-    if spaced:
-        mentions = [f"<@{me.id}> ", f"<@!{me.id}> "]
-    else:
-        mentions = [f"<@{me.id}>", f"<@!{me.id}>"]
+    mentions = [f"<@{me.id}> ", f"<@!{me.id}> "] if spaced is not False else [f"<@{me.id}>", f"<@!{me.id}>"]
+    return mentions
 
 
 # for anyone running mypy, there is a lot of errors here...
@@ -47,7 +45,7 @@ class Bot(hikari.GatewayBot):
     ) -> None:
         self.command_prefix = command_prefix
         if "banner" not in kwargs:
-            kwargs["banner"] = "expo" # We do a little cool
+            kwargs["banner"] = "expo"  # We do a little cool
         super().__init__(token, **kwargs)
 
     def command(self) -> Command:

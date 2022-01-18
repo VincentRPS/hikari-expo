@@ -38,9 +38,7 @@ setup(
     long_description=README,
     author="VincentRPS",
     packages=packages,
-    package_data={
-        "expo": ["banner.txt"]
-    },
+    package_data={"expo": ["banner.txt"]},
     requires=["hikari"],
     extras_require={
         "docs": [
