@@ -4,4 +4,3 @@
  ${green}88~~~~~  .dPYb.  88~~~   88    88      ${reset}${bold_white}running on:       ${thin_white}${system_description}${reset}
  ${blue}88.     .8P  Y8. 88      `8b  d8'      ${reset}${bold_white}documentation:    ${thin_white}https://expo.rtfd.io${reset}
  ${cyan}Y88888P YP    YP 88       `Y88P'       ${reset}${bold_white}hikari discord:   ${thin_white}https://discord.gg/3kDAzaM36b${reset}
-
