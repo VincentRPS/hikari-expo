@@ -36,10 +36,12 @@ setup(
     version=__version__,
     description="Extension module for hikari",
     long_description=README,
+    long_description_content_type="text/markdown",
     author="VincentRPS",
     packages=packages,
     package_data={"expo": ["banner.txt"]},
     requires=["hikari"],
+    python_requires=">=3.8.0,<3.11"
     extras_require={
         "docs": [
             "sphinx",
