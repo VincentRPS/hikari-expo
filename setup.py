@@ -41,7 +41,7 @@ setup(
     packages=packages,
     package_data={"expo": ["banner.txt"]},
     requires=["hikari"],
-    python_requires=">=3.8.0,<3.11"
+    python_requires=">=3.8.0,<3.11",
     extras_require={
         "docs": [
             "sphinx",

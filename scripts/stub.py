@@ -16,6 +16,5 @@ limitations under the License.
 import os
 
 os.system(
-    "stubgen expo/__init__.py expo/api/__init__.py expo/ui/__init__.py expo/commands/__init__.py ",
-    "expo/commands/app/__init__.py expo/ipc/__init__.py  -o .",
+    "stubgen expo/__init__.py expo/api/__init__.py expo/commands/__init__.py expo/commands/app/__init__.py expo/ipc/__init__.py  -o .",
 )
