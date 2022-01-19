@@ -23,7 +23,7 @@ with open("README.md") as fp:
 packages = [
     "expo",
     "expo.ui",
-    "expo.api",
+    "expo.voice",
     "expo.ipc",
     "expo.commands",
     "expo.internal",

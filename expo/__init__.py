@@ -11,7 +11,7 @@ __version__: str = "1.1.0"
 
 import typing as t
 
-from .api import *
+from .voice import *
 from .internal import *
 
 

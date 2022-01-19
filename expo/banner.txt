@@ -1,6 +1,6 @@
- ${bold_red}d88888b db    db d8888b.  .d88b.      ${reset}${bold_white} expo              ${thin_white}1.1.0${reset}
- ${red}88'     `8b  d8' 88  `8D .8P  Y8.      ${reset}${bold_white}Expo License:     ${thin_white}Copyright 2022 VincentRPS ${reset}
- ${yellow}88ooooo  `8bd8'  88oodD' 88    88      ${reset}${bold_white}interpreter:      ${thin_white}${python_implementation} ${python_version}${reset}
- ${green}88~~~~~  .dPYb.  88~~~   88    88      ${reset}${bold_white}running on:       ${thin_white}${system_description}${reset}
- ${blue}88.     .8P  Y8. 88      `8b  d8'      ${reset}${bold_white}documentation:    ${thin_white}https://expo.rtfd.io${reset}
- ${cyan}Y88888P YP    YP 88       `Y88P'       ${reset}${bold_white}hikari discord:   ${thin_white}https://discord.gg/3kDAzaM36b${reset}
+${bold_red}8888888b db    db d8888b.  .d88b.       ${reset}${bold_white}expo              ${thin_white}1.1.0${reset}
+${red} 88`     `8b  d8' 88  `8D .8P  Y8.      ${reset}${bold_white}Expo License:     ${thin_white}Copyright 2022 VincentRPS ${reset}
+${green} 88ooooo  `8bd8'  88oodD' 88    88      ${reset}${bold_white}interpreter:      ${thin_white}${python_implementation} ${python_version}${reset}
+${yellow} 88       .dPYb.  88~~~   88    88      ${reset}${bold_white}running on:       ${thin_white}${system_description}${reset}
+${blue} 88`     .8P  Y8. 88      `8b  d8'      ${reset}${bold_white}documentation:    ${thin_white}https://expo.rtfd.io${reset}
+${cyan}o888888o YP   YP o88o      `Y88P'       ${reset}${bold_white}hikari discord:   ${thin_white}https://discord.gg/3kDAzaM36b${reset}
