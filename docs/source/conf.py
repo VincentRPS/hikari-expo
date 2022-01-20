@@ -70,7 +70,7 @@ html_theme = "furo"
 html_theme_options = {
     "sidebar_hide_name": True,
 }
-html_favicon = "_static/hikari-expo.ico"
+html_favicon = "hikari-expo.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -85,5 +85,5 @@ resource_links = {
 
 intersphinx_mapping = {
     "py": ("https://docs.python.org/3", None),
-    "aiohttp": ("https://docs.aiohttp.org/en/stable/", None),
+    "aio": ("https://docs.aiohttp.org/en/stable/", None),
 }
