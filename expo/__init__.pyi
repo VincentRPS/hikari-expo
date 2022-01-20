@@ -1,7 +1,7 @@
 import typing as t
 
-from .voice import *
 from .internal import *
+from .voice import *
 
 class VersionInfo(t.NamedTuple):
     major: int

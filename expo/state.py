@@ -31,5 +31,5 @@ class ConnectionState:
             self._cached_voice_channels.append(thing.pop("voice_channel"))
         elif "unknown_cache" in thing:  # handles unknown objects, by not.
             self._cached_unknown.append(thing.pop("unknown_cache"))
-    # i need to make a way to get cached items easily.
 
+    # i need to make a way to get cached items easily.

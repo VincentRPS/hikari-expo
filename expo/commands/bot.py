@@ -23,7 +23,11 @@ from .core import Command
 
 def on_mention(bot: "Bot", spaced: bool = False):
     me = bot.get_me()
-    mentions = [f"<@{me.id}> ", f"<@!{me.id}> "] if spaced is not False else [f"<@{me.id}>", f"<@!{me.id}>"]
+    mentions = (
+        [f"<@{me.id}> ", f"<@!{me.id}> "]
+        if spaced is not False
+        else [f"<@{me.id}>", f"<@!{me.id}>"]
+    )
     return mentions
 
 
