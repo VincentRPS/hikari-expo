@@ -45,11 +45,14 @@ class Bot(hikari.GatewayBot):
     """
 
     def __init__(
-        self, token: str, command_prefix: str = on_mention, **kwargs: t.Any
+        self,
+        token: str,
+        command_prefix: t.Union[str, t.List[str]] = on_mention,
+        **kwargs: t.Any,
     ) -> None:
         self.command_prefix = command_prefix
         if "banner" not in kwargs:
-            kwargs["banner"] = "expo"  # We do a little cool
+            kwargs["banner"] = "expo"  # We do a little trollin
         super().__init__(token, **kwargs)
 
     def command(self) -> Command:
