@@ -13,11 +13,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-import typing as t
+from hikari import commands
 
-T = t.TypeVar("T")
-Coro = t.Coroutine[t.Any, t.Any, T]
+from ..bot import Bot
 
 
-class _BaseCommand:
-    __slots__ = ()
+class SlashCommand(commands.Command):
+    """A subclass of :class:`hikari.commands.Command` improving usablilty."""
+
+    def __init__(self, name: str, **kwargs):
+        super().__init__(
+            app=Bot,
+            id=Bot.get_me(Bot).id(),
+            application_id=Bot.get_me(Bot).id(),
+            name=name,
+            **kwargs
+        )
