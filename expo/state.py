@@ -15,7 +15,8 @@ limitations under the License.
 """
 
 # caches guilds and everything built into expo.
-class ConnectionState:
+# TODO; Redo.
+class ConnectionState:  # noqa: ignore
     def __init__(self):
         self._cached_unknown = []
         self._cached_guilds = []

@@ -22,6 +22,19 @@ git clone https://github.com/VincentRPS/hikari-expo
 cd hikari-expo
 ```
 
+# Issues
+for any issue please report it to our issue tracker, [here](https://github.com/VincentRPS/hikari-expo/issues/new)
+
+# Quick Example
+Down below is a quick example of the extension.
+```py
+from expo import commands  # import the commands module.
+
+bot = commands.Bot("my_bot_token")  # initiate the bot instance.
+
+bot.run()  # Start the bot
+```
+
 # Useful links
 the [hikari discord](https://discord.gg/3kDAzaM36b)
 

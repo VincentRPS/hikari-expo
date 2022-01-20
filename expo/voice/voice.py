@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-from hikari import GuildVoiceChannel, Snowflakeish, SnowflakeishOr
+from hikari import Snowflakeish
 from hikari.api import VoiceConnection
 from hikari.impl import VoiceComponentImpl
 
